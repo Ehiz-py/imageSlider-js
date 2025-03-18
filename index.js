@@ -4,6 +4,7 @@ let intervalId = null;
 // initializeSlider();
 document.addEventListener("DOMContentLoaded", initializeSlider()); //load image after dom content
 
+//main function
 function initializeSlider() {
 	if (slides.length > 0) {
 		slides[slideIndex].classList.add("displaySlide");
@@ -11,6 +12,7 @@ function initializeSlider() {
 		// console.log(intervalId);
 	}
 }
+//display function
 function showSlide(index) {
 	if (index >= slides.length) {
 		slideIndex = 0;
@@ -23,6 +25,7 @@ function showSlide(index) {
 	slides[slideIndex].classList.add("displaySlide");
 }
 
+//simple functions
 function prevSlide() {
 	clearInterval(intervalId);
 	slideIndex--;
